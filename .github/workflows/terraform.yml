@@ -29,4 +29,4 @@ jobs:
       run: terraform apply -auto-approve
 
     - name: Expose secret
-      run: echo $TEST_SECRET
+      run: echo "$TEST_SECRET"
