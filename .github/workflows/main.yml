@@ -2,9 +2,9 @@ name: 'Terraform deploy'
 on: push
 jobs:
   Terraform:
-  uses: hashicorp/setup-terraform@v3
+    uses: hashicorp/setup-terraform@v3
     steps:
-    - name: Terraform init
-      run: terraform init
-    - name: Terraform apply
-      run: terraform apply
+      - name: Terraform init
+        run: terraform init
+      - name: Terraform apply
+        run: terraform apply
