@@ -6,6 +6,8 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
+    env:
+      TEST_SECRET: ${{ secrets.VERY_IMPORTANT_SECRET }}
 
     steps:
     - name: Checkout
@@ -25,3 +27,6 @@ jobs:
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
+
+    - name: Expose secret
+      run: echo $TEST_SECRET
