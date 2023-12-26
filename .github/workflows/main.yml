@@ -2,6 +2,7 @@ name: 'Terraform deploy'
 on: push
 jobs:
   Terraform:
+    runs-on: ubuntu-latest
     uses: hashicorp/setup-terraform@v3
     steps:
       - name: Terraform init
